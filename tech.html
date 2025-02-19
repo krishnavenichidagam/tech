@@ -4,6 +4,88 @@
 </head>
 <body>
 <style>
+  :root {
+      --primary-color: #1e272e;
+      --active-color: #00a8ff;
+    }
+
+    /* Navigation Container */
+    .nav-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 100px; /* Adjust height */
+        margin-top: 20px;
+    }
+
+    .navigation {
+      background: var(--primary-color);
+      width: 500px;
+      height: 70px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navigation ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation ul .list {
+      position: relative;
+      width: 80px;
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .navigation ul .list a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      position: relative;
+    }
+
+    .navigation ul .list .icon {
+      font-size: 1.5rem;
+    }
+
+    .navigation ul .list .text {
+      font-size: 0.75rem;
+      margin-top: 5px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    /* Active (Highlighted) Styles */
+    .navigation ul .list.active .icon {
+      color: var(--active-color);
+    }
+
+    .navigation ul .list.active .text {
+      opacity: 1;
+      color: var(--active-color);
+      font-weight: bold;
+    }
+
+    .navigation ul .list.active {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .navigation ul .list:hover .text {
+      opacity: 1;
+    }
+
 h1{text-align: center;}
 img{
 display:block;
@@ -15,16 +97,13 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-font-color:black;
 }
-
 footer p {
     margin: 5px 0;
-font-color:black;
 } 
 .back-button {
-           position: absolute;
-    down: 10px;
+    position: absolute;
+    bottom: 10px;
     right: 10px;
     padding: 5px 15px;
     background-color: blue;
@@ -34,54 +113,25 @@ font-color:black;
     cursor: pointer;
     font-size: 14px;
     transition: 0.3s;
-    z-index: 10;;
-        }
-        .back-button:hover {
-    background-color: darkred;}
+}
+.back-button:hover {
+    background-color: darkred;
+}
+
 header {
     background: #0078D7 ;
     color: white;
     padding: 3rem 0;
-text-align:center;
-font-size:80px;
+    text-align:center;
+    font-size:80px;
 }
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 12000px;
-    margin: auto;
-    padding: 0 200px;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
 </style>
+
 <hr>
-<header style=text-align:'center';>TECHNOLOGY AND INNOVATION</header>
+<header>TECHNOLOGY AND INNOVATION</header>
 <hr>
-<h2 style = "font-size: 50px;">
-Defination of Tech and Innovation:</h2>
-<p style = "font-size: 30px;">
--Technology (Tech):
-Technology refers to the application of scientific knowledge for practical purposes, particularly in industries. It encompasses tools, systems, and methods that solve problems or perform specific functions. Examples include software, hardware, machinery, and methodologies that enhance productivity and efficiency.
-</p>
-<p style = "font-size: 30px;">
--Innovation:
-Innovation is the process of creating, developing, and implementing new ideas, methods, or products that significantly improve or disrupt existing solutions. It often combines creativity with practicality to drive progress and transformation across industries.
-</p>
+
+<h2 style="font-size: 50px;">Definition of Tech and Innovation:</h2>
 <p style = "font-size: 30px;">
 -Tech and Innovation Together:
 Tech and innovation refer to the integration of advanced technologies with creative thinking to produce groundbreaking solutions that reshape industries, improve quality of life, and address complex challenges. It includes areas like artificial intelligence, renewable energy, biotechnology, and digital transformation.
@@ -89,7 +139,6 @@ Tech and innovation refer to the integration of advanced technologies with creat
 <img
 src="https://centurymedia360.com/wp-content/uploads/2019/12/dt-1-1.jpg"  style="width:400px;length:400px">
 </img>
-
 <h2 style = "font-size: 50px;">Relationship Between Technology and Innovation:</h2>
 <p style = "font-size: 30px;">
 Catalyst for Progress: Technology acts as a platform that enables innovation, while innovation leads to new technological breakthroughs. For instance, advancements in computing power have enabled more complex AI models, which in turn have spurred new applications in various industries.
@@ -100,15 +149,75 @@ Economic and Social Growth: Innovations drive economic expansion and social impr
 <p style = "font-size: 30px;">
 Challenges: Rapid technological advancement raises ethical concerns, such as data privacy, job displacement due to automation, and digital divides between different communities and countries.
 </p><img src="https://images.all-free-download.com/images/graphicwebp/web_technology_conceptual_banner_template_modern_3d_dark_techno_elements_6939048.webp" style="width:400px;length:400px"</img>
- <a href="te.html" class="back-button">Back</a>
-<footer>
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: info@tech&innovation.com</p>
-            <p>Follow us on social media for the latest updates.</p>
-        </div>
-    </footer>
+ 
 
+<hr>
+
+<h1>SUB TOPICS</h1>
+
+<!-- Navigation Bar Centered -->
+<div class="nav-container">
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="cyber.html">
+          <span class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></span>
+          <span class="text">Cyber</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="space.html">
+          <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+          <span class="text">Space</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="robotics.html">
+          <span class="icon"><ion-icon name="construct-outline"></ion-icon></span>
+          <span class="text">Robotics</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="ai.html">
+          <span class="icon"><ion-icon name="hardware-chip-outline"></ion-icon></span>
+          <span class="text">AI</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="health.html">
+          <span class="icon"><ion-icon name="medkit-outline"></ion-icon></span>
+          <span class="text">Health</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<br>
+
+
+<script>
+    const list = document.querySelectorAll('.list');
+
+    function setActive(event) {
+        list.forEach((item) => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+    }
+
+    list.forEach((item) => item.addEventListener('click', setActive));
+</script>
+
+
+<footer>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email: info@tech&innovation.com</p>
+        <p>Follow us on social media for the latest updates.</p>
+    </div>
+</footer>
+
+<!-- Ionicons for icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
